@@ -1,4 +1,4 @@
-package rotate_list
+package rotateList
 
 type ListNode struct {
 	Val  int
