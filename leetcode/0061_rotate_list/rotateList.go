@@ -1,6 +1,4 @@
-package _061_rotate_list
-
-import "op-go/leetcode/0021_merge_two_sorted_lists"
+package rotate_list
 
 type ListNode struct {
 	Val  int
@@ -14,7 +12,6 @@ func main() {
 		l0 = ListNode{Val: 0, Next: &l1}
 	)
 	rotateRight(&l0, 4)
-	_9021_merge_two_sorted_lists.Hello()
 }
 
 func rotateRight(head *ListNode, k int) *ListNode {
