@@ -4,5 +4,3 @@
 [![Build Status](https://travis-ci.com/zwfang/op-go.svg?branch=master)](https://travis-ci.com/zwfang/op-go)
 
 > Elements of Programming
-
-data-structures; algorithms
