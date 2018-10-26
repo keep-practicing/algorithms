@@ -20,10 +20,10 @@ func rotateRight(head *ListNode, k int) *ListNode {
 	}
 
 	var (
-		listSize   int       = 0
-		count      int       = 0
-		p          *ListNode = head
-		rotateNode *ListNode = head
+		listSize   int
+		count      int
+		p          = head
+		rotateNode = head
 	)
 
 	for p != nil && count < k {
