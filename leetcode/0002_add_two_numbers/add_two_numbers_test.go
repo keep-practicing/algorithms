@@ -1,4 +1,4 @@
-package add_two_numbers
+package addTwoNumbers
 
 import "testing"
 
