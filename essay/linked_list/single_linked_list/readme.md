@@ -10,4 +10,6 @@
 
 使用p和q两个指针配合工作，使得两个节点间的指向反向，同时用r记录剩下的链表。
 
-![](./../../images/single_linked_list_reverse.png)
+![](./../../images/single_linked_list_reverse1.png)
+
+![](./../../images/single_linked_list_reverse2.png)
