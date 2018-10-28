@@ -4,37 +4,51 @@ import "testing"
 
 func TestAddTwoNumbers1(t *testing.T) {
 	var (
-		l1Vals   = [3]int{2, 4, 3}
-		l2Vals   = [3]int{5, 6, 4}
-		l1       = ListNode{Val: -1}
-		l2       = l1
-		cur1     = &l1
-		cur2     = &l2
-		addLi1   [3]int
+		liCase   map[string][]int
+		liCases  []map[string][]int
 		testFunc = [2]func(l1 *ListNode, l2 *ListNode) *ListNode{addTwoNumbers1, addTwoNumbers2}
 	)
 
-	expectedLi := [3]int{7, 0, 8}
+	// case 1
+	liCase = make(map[string][]int)
+	liCase["l1"] = []int{2, 4, 3}
+	liCase["l2"] = []int{5, 6, 4}
+	liCase["expected"] = []int{7, 0, 8}
+	liCases = append(liCases, liCase)
 
-	for i := 0; i < len(l1Vals); i++ {
-		cur1.Next = &ListNode{Val: l1Vals[i]}
-		cur1 = cur1.Next
-	}
-	for i := 0; i < len(l2Vals); i++ {
-		cur2.Next = &ListNode{Val: l2Vals[i]}
-		cur2 = cur2.Next
-	}
+	// case 2
+	liCase["l1"] = []int{5}
+	liCase["l2"] = []int{5}
+	liCase["expected"] = []int{0, 1}
+	liCases = append(liCases, liCase)
 
-	for i := 0; i < 2; i++ {
-		addHead := testFunc[i](l1.Next, l2.Next)
+	// case 3
+	liCase["l1"] = []int{1}
+	liCase["l2"] = []int{9, 9, 9}
+	liCase["expected"] = []int{0, 0, 0, 1}
+	liCases = append(liCases, liCase)
 
-		for i := 0; addHead != nil; i++ {
-			addLi1[i] = addHead.Val
-			addHead = addHead.Next
+	for i := 0; i < len(liCases); i++ {
+		l1 := sliToList(liCases[i]["l1"])
+		l2 := sliToList(liCases[i]["l2"])
+		for j := 0; j < len(testFunc); j++ {
+			newL := testFunc[j](l1, l2)
+			for k := 0; k < len(liCases[i]["expected"]); k++ {
+				if liCases[i]["expected"][k] != newL.Val {
+					t.Error("测试不通过")
+				}
+				newL = newL.Next
+			}
 		}
-
-		if addLi1 != expectedLi {
-			t.Error("测试不通过")
-		}
 	}
+}
+
+func sliToList(sli []int) *ListNode {
+	li := ListNode{Val: -1}
+	cur := &li
+	for i := 0; i < len(sli); i++ {
+		cur.Next = &ListNode{Val: sli[i]}
+		cur = cur.Next
+	}
+	return li.Next
 }
