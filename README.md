@@ -4,5 +4,6 @@
 [![Build Status](https://travis-ci.com/zwfang/op-go.svg?branch=master)](https://travis-ci.com/zwfang/op-go)
 [![codecov](https://codecov.io/gh/zwfang/op-go/branch/master/graph/badge.svg)](https://codecov.io/gh/zwfang/op-go)
 [![GitHub license](https://img.shields.io/github/license/zwfang/op-go.svg)](https://github.com/zwfang/op-go/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/zwfang/op-go)](https://goreportcard.com/report/github.com/zwfang/op-go)
 
 > Elements of Programming
