@@ -1,4 +1,4 @@
-package singleLinkedList
+package singlelinkedlist
 
 import "testing"
 
