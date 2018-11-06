@@ -1,5 +1,6 @@
-package addTwoNumbers
+package addtwonumbers
 
+// ListNode is node of linked list
 type ListNode struct {
 	Val  int
 	Next *ListNode
