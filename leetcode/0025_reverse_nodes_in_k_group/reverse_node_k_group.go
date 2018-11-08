@@ -1,4 +1,4 @@
-package reverseNodesInKGroup
+package reversenodesinkgroup
 
 // ListNode is node of linked list
 type ListNode struct {
