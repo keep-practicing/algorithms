@@ -24,4 +24,4 @@ You may not alter the values in the list's nodes, only nodes itself may be chang
 
 ## Solution
 
-[code](./reverseNodeKGroup.go)
+[code](reverse_node_k_group.go)
