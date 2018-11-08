@@ -95,7 +95,7 @@ func TestReverseKGroup(t *testing.T) {
 	for _, data := range tests {
 		t.Run(data.name, func(t *testing.T) {
 			if result := reverseKGroup(data.args.head, data.args.k); !reflect.DeepEqual(result, data.expected) {
-				t.Errorf("reverseKGroup() = %v, want %v", result, data.expected)
+				t.Errorf("reverseKGroup() = %v, expected %v", result, data.expected)
 			}
 		})
 	}
