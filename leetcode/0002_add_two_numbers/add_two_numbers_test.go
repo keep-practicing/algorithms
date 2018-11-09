@@ -41,14 +41,14 @@ func TestAddTwoNumbers1(t *testing.T) {
 	liCases = append(liCases, liCase)
 
 	// case 6
-	liCase["l1"] = []int{}
+	liCase["l1"] = []int{1}
 	liCase["l2"] = []int{8, 9}
 	liCase["expected"] = []int{8, 9}
 	liCases = append(liCases, liCase)
 
 	// case 7
 	liCase["l1"] = []int{8, 9}
-	liCase["l2"] = []int{}
+	liCase["l2"] = []int{1}
 	liCase["expected"] = []int{8, 9}
 	liCases = append(liCases, liCase)
 
