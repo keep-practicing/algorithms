@@ -1,4 +1,4 @@
-package mergeTwoLists
+package mergetwolists
 
 // ListNode is node of linked list
 type ListNode struct {
