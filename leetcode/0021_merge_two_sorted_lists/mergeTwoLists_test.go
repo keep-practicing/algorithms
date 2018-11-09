@@ -1,20 +1,84 @@
-package mergeTwoLists
+package mergetwolists
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestMergeTwoLists(t *testing.T) {
-	l2 := ListNode{Val: 2, Next: nil}
-	head1 := ListNode{Val: 1, Next: &l2}
-	head2 := ListNode{Val: 3, Next: nil}
+	testDatas := []struct {
+		name     string
+		arg1     *ListNode
+		arg2     *ListNode
+		expected *ListNode
+	}{
+		{
+			name: "one",
+			arg1: &ListNode{Val: 1, Next: &ListNode{Val: 3, Next: &ListNode{Val: 5, Next: nil}}},
+			arg2: &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 6, Next: nil}}},
+			expected: &ListNode{
+				Val: 1, Next: &ListNode{
+					Val: 2, Next: &ListNode{
+						Val: 3,
+						Next: &ListNode{
+							Val: 4,
+							Next: &ListNode{
+								Val: 5,
+								Next: &ListNode{
+									Val:  6,
+									Next: nil,
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		{
+			name: "two",
+			arg1: &ListNode{Val: 1, Next: nil},
+			arg2: &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 6, Next: nil}}},
+			expected: &ListNode{
+				Val: 1, Next: &ListNode{
+					Val: 2, Next: &ListNode{
+						Val: 4,
+						Next: &ListNode{
+							Val:  6,
+							Next: nil,
+						},
+					},
+				},
+			},
+		},
+		{
+			name:     "three",
+			arg1:     nil,
+			arg2:     nil,
+			expected: nil,
+		},
+		{
+			name: "four",
+			arg1: &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 6, Next: nil}}},
+			arg2: &ListNode{Val: 1, Next: nil},
+			expected: &ListNode{
+				Val: 1, Next: &ListNode{
+					Val: 2, Next: &ListNode{
+						Val: 4,
+						Next: &ListNode{
+							Val:  6,
+							Next: nil,
+						},
+					},
+				},
+			},
+		},
+	}
 
-	listNodeArray := [3]*ListNode{&head1, &l2, &head2}
-
-	head := mergeTwoLists(&head1, &head2)
-
-	for _, j := range listNodeArray {
-		if j != head {
-			t.Error("测试不通过.")
-		}
-		head = head.Next
+	for _, testData := range testDatas {
+		t.Run(testData.name, func(t *testing.T) {
+			if result := mergeTwoLists(testData.arg1, testData.arg2); !reflect.DeepEqual(result, testData.expected) {
+				t.Errorf("mergeTwoLists() = %v, expected %v", result, testData.expected)
+			}
+		})
 	}
 }
