@@ -1,90 +1,254 @@
 package addtwonumbers
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestAddTwoNumbers1(t *testing.T) {
-	var (
-		liCase  map[string][]int
-		liCases []map[string][]int
-	)
+	testDatas := []struct {
+		name     string
+		arg1     *ListNode
+		arg2     *ListNode
+		expected *ListNode
+	}{
+		{
+			name: "one",
+			arg1: &ListNode{
+				Val: 2,
+				Next: &ListNode{
+					Val: 4,
+					Next: &ListNode{
+						Val: 3,
+					},
+				},
+			},
+			arg2: &ListNode{
+				Val: 5,
+				Next: &ListNode{
+					Val: 6,
+					Next: &ListNode{
+						Val: 4,
+					},
+				},
+			},
+			expected: &ListNode{
+				Val: 7,
+				Next: &ListNode{
+					Val: 0,
+					Next: &ListNode{
+						Val: 8,
+					},
+				},
+			},
+		},
+		{
+			name: "two",
+			arg1: &ListNode{
+				Val:  5,
+				Next: nil,
+			},
+			arg2: &ListNode{
+				Val:  5,
+				Next: nil,
+			},
+			expected: &ListNode{
+				Val: 0,
+				Next: &ListNode{
+					Val:  1,
+					Next: nil,
+				},
+			},
+		},
+		{
+			name: "three",
+			arg1: &ListNode{
+				Val:  1,
+				Next: nil,
+			},
+			arg2: &ListNode{
+				Val: 9,
+				Next: &ListNode{
+					Val: 9,
+					Next: &ListNode{
+						Val: 9,
+					},
+				},
+			},
+			expected: &ListNode{
+				Val: 0,
+				Next: &ListNode{
+					Val: 0,
+					Next: &ListNode{
+						Val: 0,
+						Next: &ListNode{
+							Val: 1,
+						},
+					},
+				},
+			},
+		},
+		{
+			name: "four",
+			arg1: &ListNode{
+				Val: 9,
+				Next: &ListNode{
+					Val: 9,
+					Next: &ListNode{
+						Val: 9,
+					},
+				},
+			},
+			arg2: &ListNode{
+				Val:  1,
+				Next: nil,
+			},
+			expected: &ListNode{
+				Val: 0,
+				Next: &ListNode{
+					Val: 0,
+					Next: &ListNode{
+						Val: 0,
+						Next: &ListNode{
+							Val: 1,
+						},
+					},
+				},
+			},
+		},
+	}
 
-	// case 1
-	liCase = make(map[string][]int)
-	liCase["l1"] = []int{2, 4, 3}
-	liCase["l2"] = []int{5, 6, 4}
-	liCase["expected"] = []int{7, 0, 8}
-	liCases = append(liCases, liCase)
-
-	// case 2
-	liCase["l1"] = []int{5}
-	liCase["l2"] = []int{5}
-	liCase["expected"] = []int{0, 1}
-	liCases = append(liCases, liCase)
-
-	// case 3
-	liCase["l1"] = []int{1}
-	liCase["l2"] = []int{9, 9, 9}
-	liCase["expected"] = []int{0, 0, 0, 1}
-	liCases = append(liCases, liCase)
-
-	// case 4
-	liCase["l1"] = []int{9, 9}
-	liCase["l2"] = []int{1}
-	liCase["expected"] = []int{0, 0, 1}
-	liCases = append(liCases, liCase)
-
-	// case 5
-	liCase["l1"] = []int{7}
-	liCase["l2"] = []int{8, 9}
-	liCase["expected"] = []int{5, 0, 1}
-	liCases = append(liCases, liCase)
-
-	// case 6
-	liCase["l1"] = []int{1, 9, 5, 6, 7}
-	liCase["l2"] = []int{7}
-	liCase["expected"] = []int{8, 9, 5, 6, 7}
-	liCases = append(liCases, liCase)
-
-	// case 7
-	liCase["l1"] = []int{7}
-	liCase["l2"] = []int{1, 9, 5, 6, 7}
-	liCase["expected"] = []int{8, 9, 5, 6, 7}
-	liCases = append(liCases, liCase)
-
-	// case 8
-	liCase["l1"] = []int{3, 9, 5, 6, 7}
-	liCase["l2"] = []int{7}
-	liCase["expected"] = []int{0, 0, 6, 6, 7}
-	liCases = append(liCases, liCase)
-
-	for i := 0; i < len(liCases); i++ {
-		l1 := sliToList(liCases[i]["l1"])
-		l2 := sliToList(liCases[i]["l2"])
-		newL1 := addTwoNumbers1(l1, l2)
-		for k := 0; k < len(liCases[i]["expected"]); k++ {
-			if liCases[i]["expected"][k] != newL1.Val {
-				t.Error("测试不通过")
+	for _, testData := range testDatas {
+		t.Run(testData.name, func(t *testing.T) {
+			if result := addTwoNumbers1(testData.arg1, testData.arg2); !reflect.DeepEqual(result, testData.expected) {
+				t.Errorf("expected %v, got %v", testData.expected, result)
 			}
-			newL1 = newL1.Next
-		}
-		l1 = sliToList(liCases[i]["l1"])
-		l2 = sliToList(liCases[i]["l2"])
-		newL2 := addTwoNumbers2(l1, l2)
-		for k := 0; k < len(liCases[i]["expected"]); k++ {
-			if liCases[i]["expected"][k] != newL2.Val {
-				t.Error("测试不通过")
-			}
-			newL2 = newL2.Next
-		}
+		})
 	}
 }
 
-func sliToList(sli []int) *ListNode {
-	li := ListNode{Val: -1}
-	cur := &li
-	for i := 0; i < len(sli); i++ {
-		cur.Next = &ListNode{Val: sli[i]}
-		cur = cur.Next
+func TestAddTwoNumbers2(t *testing.T) {
+	testDatas := []struct {
+		name     string
+		arg1     *ListNode
+		arg2     *ListNode
+		expected *ListNode
+	}{
+		{
+			name: "one",
+			arg1: &ListNode{
+				Val: 2,
+				Next: &ListNode{
+					Val: 4,
+					Next: &ListNode{
+						Val: 3,
+					},
+				},
+			},
+			arg2: &ListNode{
+				Val: 5,
+				Next: &ListNode{
+					Val: 6,
+					Next: &ListNode{
+						Val: 4,
+					},
+				},
+			},
+			expected: &ListNode{
+				Val: 7,
+				Next: &ListNode{
+					Val: 0,
+					Next: &ListNode{
+						Val: 8,
+					},
+				},
+			},
+		},
+		{
+			name: "two",
+			arg1: &ListNode{
+				Val:  5,
+				Next: nil,
+			},
+			arg2: &ListNode{
+				Val:  5,
+				Next: nil,
+			},
+			expected: &ListNode{
+				Val: 0,
+				Next: &ListNode{
+					Val:  1,
+					Next: nil,
+				},
+			},
+		},
+		{
+			name: "three",
+			arg1: &ListNode{
+				Val:  1,
+				Next: nil,
+			},
+			arg2: &ListNode{
+				Val: 9,
+				Next: &ListNode{
+					Val: 9,
+					Next: &ListNode{
+						Val: 9,
+					},
+				},
+			},
+			expected: &ListNode{
+				Val: 0,
+				Next: &ListNode{
+					Val: 0,
+					Next: &ListNode{
+						Val: 0,
+						Next: &ListNode{
+							Val: 1,
+						},
+					},
+				},
+			},
+		},
+		{
+			name: "four",
+			arg1: &ListNode{
+				Val: 9,
+				Next: &ListNode{
+					Val: 9,
+					Next: &ListNode{
+						Val: 9,
+					},
+				},
+			},
+			arg2: &ListNode{
+				Val:  1,
+				Next: nil,
+			},
+			expected: &ListNode{
+				Val: 0,
+				Next: &ListNode{
+					Val: 0,
+					Next: &ListNode{
+						Val: 0,
+						Next: &ListNode{
+							Val: 1,
+						},
+					},
+				},
+			},
+		},
 	}
-	return li.Next
+
+	for _, testData := range testDatas {
+		t.Run(testData.name, func(t *testing.T) {
+			if result := addTwoNumbers2(testData.arg1, testData.arg2); !reflect.DeepEqual(result, testData.expected) {
+				t.Errorf("expected %v, got %v", testData.expected, result)
+			}
+		})
+	}
+}
+
+func TestMain(m *testing.M) {
+	m.Run()
 }
