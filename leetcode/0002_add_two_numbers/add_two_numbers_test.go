@@ -4,9 +4,8 @@ import "testing"
 
 func TestAddTwoNumbers1(t *testing.T) {
 	var (
-		liCase   map[string][]int
-		liCases  []map[string][]int
-		testFunc = [2]func(l1 *ListNode, l2 *ListNode) *ListNode{addTwoNumbers1, addTwoNumbers2}
+		liCase  map[string][]int
+		liCases []map[string][]int
 	)
 
 	// case 1
@@ -61,14 +60,21 @@ func TestAddTwoNumbers1(t *testing.T) {
 	for i := 0; i < len(liCases); i++ {
 		l1 := sliToList(liCases[i]["l1"])
 		l2 := sliToList(liCases[i]["l2"])
-		for j := 0; j < len(testFunc); j++ {
-			newL := testFunc[j](l1, l2)
-			for k := 0; k < len(liCases[i]["expected"]); k++ {
-				if liCases[i]["expected"][k] != newL.Val {
-					t.Error("测试不通过")
-				}
-				newL = newL.Next
+		newL1 := addTwoNumbers1(l1, l2)
+		for k := 0; k < len(liCases[i]["expected"]); k++ {
+			if liCases[i]["expected"][k] != newL1.Val {
+				t.Error("测试不通过")
 			}
+			newL1 = newL1.Next
+		}
+		l1 = sliToList(liCases[i]["l1"])
+		l2 = sliToList(liCases[i]["l2"])
+		newL2 := addTwoNumbers2(l1, l2)
+		for k := 0; k < len(liCases[i]["expected"]); k++ {
+			if liCases[i]["expected"][k] != newL2.Val {
+				t.Error("测试不通过")
+			}
+			newL2 = newL2.Next
 		}
 	}
 }
