@@ -16,13 +16,13 @@ func TestRotateList(t *testing.T) {
 			name: "one",
 			arg: &ListNode{Val: 1, Next: &ListNode{
 				Val: 2, Next: &ListNode{
-					Val: 3, Next: nil,
+					Val: 3, Next: &ListNode{Val: 4, Next: nil},
 				},
 			}},
 			k: 2,
-			expected: &ListNode{Val: 2, Next: &ListNode{
-				Val: 3, Next: &ListNode{
-					Val: 1, Next: nil,
+			expected: &ListNode{Val: 3, Next: &ListNode{
+				Val: 4, Next: &ListNode{
+					Val: 1, Next: &ListNode{Val: 2, Next: nil},
 				},
 			}},
 		},
