@@ -30,4 +30,4 @@ rotate 4 steps to the right: 2->0->1->NULL
 
 ## Solution
 
-[code](./rotateList.go)
+[code](./rotate_list.go)

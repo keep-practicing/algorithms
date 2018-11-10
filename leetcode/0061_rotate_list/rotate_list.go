@@ -1,4 +1,4 @@
-package rotateList
+package rotatelist
 
 // ListNode is node of linked list
 type ListNode struct {
