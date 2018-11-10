@@ -116,6 +116,58 @@ func TestAddTwoNumbers1(t *testing.T) {
 				},
 			},
 		},
+		{
+			name: "five",
+			arg1: &ListNode{
+				Val: 4,
+				Next: &ListNode{
+					Val: 3,
+					Next: &ListNode{
+						Val: 1,
+					},
+				},
+			},
+			arg2: &ListNode{
+				Val:  1,
+				Next: nil,
+			},
+			expected: &ListNode{
+				Val: 5,
+				Next: &ListNode{
+					Val: 3,
+					Next: &ListNode{
+						Val:  1,
+						Next: nil,
+					},
+				},
+			},
+		},
+		{
+			name: "six",
+			arg1: &ListNode{
+				Val:  1,
+				Next: nil,
+			},
+			arg2: &ListNode{
+				Val: 4,
+				Next: &ListNode{
+					Val: 3,
+					Next: &ListNode{
+						Val: 1,
+					},
+				},
+			},
+			expected: &ListNode{
+				Val: 5,
+				Next: &ListNode{
+					Val: 3,
+					Next: &ListNode{
+						Val:  1,
+						Next: nil,
+					},
+				},
+			},
+		},
 	}
 
 	for _, testData := range testDatas {
@@ -234,6 +286,58 @@ func TestAddTwoNumbers2(t *testing.T) {
 						Next: &ListNode{
 							Val: 1,
 						},
+					},
+				},
+			},
+		},
+		{
+			name: "five",
+			arg1: &ListNode{
+				Val: 4,
+				Next: &ListNode{
+					Val: 3,
+					Next: &ListNode{
+						Val: 1,
+					},
+				},
+			},
+			arg2: &ListNode{
+				Val:  1,
+				Next: nil,
+			},
+			expected: &ListNode{
+				Val: 5,
+				Next: &ListNode{
+					Val: 3,
+					Next: &ListNode{
+						Val:  1,
+						Next: nil,
+					},
+				},
+			},
+		},
+		{
+			name: "six",
+			arg1: &ListNode{
+				Val:  1,
+				Next: nil,
+			},
+			arg2: &ListNode{
+				Val: 4,
+				Next: &ListNode{
+					Val: 3,
+					Next: &ListNode{
+						Val: 1,
+					},
+				},
+			},
+			expected: &ListNode{
+				Val: 5,
+				Next: &ListNode{
+					Val: 3,
+					Next: &ListNode{
+						Val:  1,
+						Next: nil,
 					},
 				},
 			},
