@@ -15,6 +15,12 @@ func TestReverseSingleLinkedList(t *testing.T) {
 		reverseHead = reverseHead.Next
 	}
 
+	head = ListNode{Val: 1, Next: nil}
+	reverseHead = reverseSingleLinkedList(&head)
+	if reverseHead.Val != 1 || reverseHead.Next != nil {
+		t.Error("测试不通过")
+	}
+
 	// 方法三测试
 	head1 := ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5}}}}}
 	reverseHead = reverseSingleLinkedList2(&head1)
