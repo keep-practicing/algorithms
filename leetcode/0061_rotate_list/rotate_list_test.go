@@ -26,6 +26,34 @@ func TestRotateList(t *testing.T) {
 				},
 			}},
 		},
+		{
+			name: "two",
+			arg: &ListNode{Val: 1, Next: &ListNode{
+				Val: 2, Next: &ListNode{
+					Val: 3, Next: nil,
+				},
+			}},
+			k: 3,
+			expected: &ListNode{Val: 1, Next: &ListNode{
+				Val: 2, Next: &ListNode{
+					Val: 3, Next: nil,
+				},
+			}},
+		},
+		{
+			name: "three",
+			arg: &ListNode{Val: 1, Next: &ListNode{
+				Val: 2, Next: &ListNode{
+					Val: 3, Next: nil,
+				},
+			}},
+			k: 5,
+			expected: &ListNode{Val: 2, Next: &ListNode{
+				Val: 3, Next: &ListNode{
+					Val: 1, Next: nil,
+				},
+			}},
+		},
 	}
 
 	for _, testData := range testDatas {
