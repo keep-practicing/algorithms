@@ -40,6 +40,24 @@ func TestAddTwoNumbers1(t *testing.T) {
 	liCase["expected"] = []int{5, 0, 1}
 	liCases = append(liCases, liCase)
 
+	// case 6
+	liCase["l1"] = []int{1, 9, 5, 6, 7}
+	liCase["l2"] = []int{7}
+	liCase["expected"] = []int{8, 9, 5, 6, 7}
+	liCases = append(liCases, liCase)
+
+	// case 7
+	liCase["l1"] = []int{7}
+	liCase["l2"] = []int{1, 9, 5, 6, 7}
+	liCase["expected"] = []int{8, 9, 5, 6, 7}
+	liCases = append(liCases, liCase)
+
+	// case 8
+	liCase["l1"] = []int{3, 9, 5, 6, 7}
+	liCase["l2"] = []int{7}
+	liCase["expected"] = []int{0, 0, 6, 6, 7}
+	liCases = append(liCases, liCase)
+
 	for i := 0; i < len(liCases); i++ {
 		l1 := sliToList(liCases[i]["l1"])
 		l2 := sliToList(liCases[i]["l2"])
