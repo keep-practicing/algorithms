@@ -91,6 +91,21 @@ func TestReverseKGroup(t *testing.T) {
 				},
 			},
 		},
+
+		{
+			name: "three",
+			args: args{
+				head: &ListNode{
+					Val:  1,
+					Next: nil,
+				},
+				k: 2,
+			},
+			expected: &ListNode{
+				Val:  1,
+				Next: nil,
+			},
+		},
 	}
 	for _, data := range tests {
 		t.Run(data.name, func(t *testing.T) {

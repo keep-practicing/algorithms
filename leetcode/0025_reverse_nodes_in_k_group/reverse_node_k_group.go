@@ -6,11 +6,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func main() {
-	ll := ListNode{Val: 1, Next: nil}
-	reverseKGroup(&ll, 2)
-}
-
 func reverseKGroup(head *ListNode, k int) *ListNode {
 	if head == nil || head.Next == nil || k < 2 {
 		return head
