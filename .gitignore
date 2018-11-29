@@ -13,3 +13,6 @@
 
 # JetBrains
 .idea/
+
+# vs code
+.vscode/
