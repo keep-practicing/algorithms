@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// Element iof Queue
+// Element of Queue
 type Element interface{}
 
 // Queue data structure
