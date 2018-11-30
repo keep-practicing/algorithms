@@ -98,10 +98,10 @@ func (l *List) GetNode(index int) (r Node, ok bool) {
 func (l *List) GetIndex(x interface{}) (index int) {
 	for current := l.Head; current.next != nil; {
 		current = current.next
+		index++
 		if current.Value == x {
 			break
 		}
-		index++
 	}
 	return
 }

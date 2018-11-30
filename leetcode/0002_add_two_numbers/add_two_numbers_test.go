@@ -1,6 +1,7 @@
 package addtwonumbers
 
 import (
+	"os"
 	"reflect"
 	"testing"
 )
@@ -354,5 +355,5 @@ func TestAddTwoNumbers2(t *testing.T) {
 }
 
 func TestMain(m *testing.M) {
-	m.Run()
+	os.Exit(m.Run())
 }
