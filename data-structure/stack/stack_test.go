@@ -1,6 +1,9 @@
 package stack
 
-import "testing"
+import (
+	"os"
+	"testing"
+)
 
 func TestStackLen(t *testing.T) {
 	var myStack Stack
@@ -69,5 +72,5 @@ func TestStackPop(t *testing.T) {
 }
 
 func TestMain(m *testing.M) {
-	m.Run()
+	os.Exit(m.Run())
 }
