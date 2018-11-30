@@ -8,7 +8,7 @@ type Node struct {
 	next  *Node
 }
 
-// List represents a doubly linked list.
+// List represents a single linked list.
 // The zero value for List is an empty list ready to use.
 type List struct {
 	Head *Node
