@@ -1,4 +1,4 @@
-### Solutin for LeetCode algorithm problems, continually updating.
+### Solution for LeetCode algorithm problems, continually updating.
 
 |题号|题目|solution|难度|
 |:---:|:---:|:---:|:---:|
