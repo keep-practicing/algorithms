@@ -1,9 +1,9 @@
 # op
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c71141a8ea664afba492c6278d9944bf)](https://app.codacy.com/app/zwfang/op-go?utm_source=github.com&utm_medium=referral&utm_content=zwfang/op-go&utm_campaign=Badge_Grade_Dashboard)
-[![Build Status](https://travis-ci.com/zwfang/op-go.svg?branch=master)](https://travis-ci.com/zwfang/op-go)
-[![codecov](https://codecov.io/gh/zwfang/op-go/branch/master/graph/badge.svg)](https://codecov.io/gh/zwfang/op-go)
-[![GitHub license](https://img.shields.io/github/license/zwfang/op-go.svg)](https://github.com/zwfang/op-go/blob/master/LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/github.com/zwfang/op-go)](https://goreportcard.com/report/github.com/zwfang/op-go)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0746f17f241f4d309d25c390c904aa34)](https://www.codacy.com/app/zwfang/op?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=zwfang/op&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.com/zwfang/op.svg?branch=master)](https://travis-ci.com/zwfang/op)
+[![codecov](https://codecov.io/gh/zwfang/op/branch/master/graph/badge.svg)](https://codecov.io/gh/zwfang/op)
+[![GitHub license](https://img.shields.io/github/license/zwfang/op.svg)](https://github.com/zwfang/op/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/zwfang/op)](https://goreportcard.com/report/github.com/zwfang/op)
 
 > Elements of Programming
