@@ -29,32 +29,31 @@ func addTwoNumbers1(l1 *ListNode, l2 *ListNode) *ListNode {
 			cur.Next = l2
 		}
 		return head.Next
-	} else {
-		for l1 != nil {
-			sum := l1.Val + carry
-			val := sum % 10
-			carry = sum / 10
-			node := ListNode{Val: val}
-			cur.Next = &node
-			cur = cur.Next
-			l1 = l1.Next
-		}
-		for l2 != nil {
-			sum := l2.Val + carry
-			val := sum % 10
-			carry = sum / 10
-			node := ListNode{Val: val}
-			cur.Next = &node
-			cur = cur.Next
-			l2 = l2.Next
-		}
-		for carry != 0 {
-			val := carry % 10
-			carry = carry / 10
-			node := ListNode{Val: val}
-			cur.Next = &node
-			cur = cur.Next
-		}
+	}
+	for l1 != nil {
+		sum := l1.Val + carry
+		val := sum % 10
+		carry = sum / 10
+		node := ListNode{Val: val}
+		cur.Next = &node
+		cur = cur.Next
+		l1 = l1.Next
+	}
+	for l2 != nil {
+		sum := l2.Val + carry
+		val := sum % 10
+		carry = sum / 10
+		node := ListNode{Val: val}
+		cur.Next = &node
+		cur = cur.Next
+		l2 = l2.Next
+	}
+	for carry != 0 {
+		val := carry % 10
+		carry = carry / 10
+		node := ListNode{Val: val}
+		cur.Next = &node
+		cur = cur.Next
 	}
 	return head.Next
 }
