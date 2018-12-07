@@ -10,4 +10,4 @@ This repository is used to record the process that I study data structure and al
 
 ### [Algorithm](./algorithm/readme.md)
 
-### [Leetcode solution](./leetcode/README.md)
+### [Solution for leetcode](./leetcode/README.md)
