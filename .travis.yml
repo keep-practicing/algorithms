@@ -12,3 +12,12 @@ script:
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)
+
+
+language: python3
+
+python3:
+  - "3.5.1"
+
+script:
+  - python3 -m unittest
