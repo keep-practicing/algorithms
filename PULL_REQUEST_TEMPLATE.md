@@ -1,3 +1,3 @@
 category:
 
-feature
+feature:
