@@ -2,6 +2,7 @@
 
 |题号|题目|solution|难度|备注|
 |:---:|:---:|:---:|:---:|:---:|
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/)|[solution](0001_two_sum/readme.md)|Easy|array; lookup table|
 |0002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[solution](0002_add_two_numbers/README.md)|Medium||
 |0020|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|[solution](0020_valid_parentheses/readme.md)|Easy||
 |0021|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[solution](0021_merge_two_sorted_lists/README.md)|Easy||
