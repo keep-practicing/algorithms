@@ -6,6 +6,7 @@
 
 This repository is used to record the process that I study data structure and algorithm. Each algorithm and data structure has its own separate README file with related explanations and links for further reading.
 
+
 ### [Data structure](./data-structure/readme.md)
 
 ### [Algorithm](./algorithm/readme.md)
