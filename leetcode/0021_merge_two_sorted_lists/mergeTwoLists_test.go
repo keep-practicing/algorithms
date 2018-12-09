@@ -5,6 +5,17 @@ import (
 	"testing"
 )
 
+func createSingleLinkedList(arr []int) *ListNode {
+	head := &ListNode{}
+	cur := head
+
+	for _, j := range arr {
+		cur.Next = &ListNode{Val: j}
+		cur = cur.Next
+	}
+	return head.Next
+}
+
 func TestMergeTwoLists(t *testing.T) {
 	testDatas := []struct {
 		name     string
@@ -13,42 +24,16 @@ func TestMergeTwoLists(t *testing.T) {
 		expected *ListNode
 	}{
 		{
-			name: "one",
-			arg1: &ListNode{Val: 1, Next: &ListNode{Val: 3, Next: &ListNode{Val: 5, Next: nil}}},
-			arg2: &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 6, Next: nil}}},
-			expected: &ListNode{
-				Val: 1, Next: &ListNode{
-					Val: 2, Next: &ListNode{
-						Val: 3,
-						Next: &ListNode{
-							Val: 4,
-							Next: &ListNode{
-								Val: 5,
-								Next: &ListNode{
-									Val:  6,
-									Next: nil,
-								},
-							},
-						},
-					},
-				},
-			},
+			name:     "one",
+			arg1:     createSingleLinkedList([]int{1, 3, 5}),
+			arg2:     createSingleLinkedList([]int{2, 4, 6}),
+			expected: createSingleLinkedList([]int{1, 2, 3, 4, 5, 6}),
 		},
 		{
-			name: "two",
-			arg1: &ListNode{Val: 1, Next: nil},
-			arg2: &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 6, Next: nil}}},
-			expected: &ListNode{
-				Val: 1, Next: &ListNode{
-					Val: 2, Next: &ListNode{
-						Val: 4,
-						Next: &ListNode{
-							Val:  6,
-							Next: nil,
-						},
-					},
-				},
-			},
+			name:     "two",
+			arg1:     createSingleLinkedList([]int{1}),
+			arg2:     createSingleLinkedList([]int{2, 4, 6}),
+			expected: createSingleLinkedList([]int{1, 2, 4, 6}),
 		},
 		{
 			name:     "three",
@@ -57,20 +42,10 @@ func TestMergeTwoLists(t *testing.T) {
 			expected: nil,
 		},
 		{
-			name: "four",
-			arg1: &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 6, Next: nil}}},
-			arg2: &ListNode{Val: 1, Next: nil},
-			expected: &ListNode{
-				Val: 1, Next: &ListNode{
-					Val: 2, Next: &ListNode{
-						Val: 4,
-						Next: &ListNode{
-							Val:  6,
-							Next: nil,
-						},
-					},
-				},
-			},
+			name:     "four",
+			arg1:     createSingleLinkedList([]int{2, 4, 6}),
+			arg2:     createSingleLinkedList([]int{1}),
+			expected: createSingleLinkedList([]int{1, 2, 4, 6}),
 		},
 	}
 

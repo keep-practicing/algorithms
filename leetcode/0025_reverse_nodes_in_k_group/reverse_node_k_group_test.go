@@ -5,6 +5,17 @@ import (
 	"testing"
 )
 
+func createSingleLinkedList(arr []int) *ListNode {
+	head := &ListNode{}
+	cur := head
+
+	for _, j := range arr {
+		cur.Next = &ListNode{Val: j}
+		cur = cur.Next
+	}
+	return head.Next
+}
+
 func TestReverseKGroup(t *testing.T) {
 	type args struct {
 		head *ListNode
@@ -18,93 +29,27 @@ func TestReverseKGroup(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				head: &ListNode{
-					Val: 1,
-					Next: &ListNode{
-						Val: 2,
-						Next: &ListNode{
-							Val: 3,
-							Next: &ListNode{
-								Val: 4,
-								Next: &ListNode{
-									Val:  5,
-									Next: nil,
-								},
-							},
-						},
-					},
-				},
-				k: 2,
+				head: createSingleLinkedList([]int{1, 2, 3, 4, 5}),
+				k:    2,
 			},
-			expected: &ListNode{
-				Val: 2,
-				Next: &ListNode{
-					Val: 1,
-					Next: &ListNode{
-						Val: 4,
-						Next: &ListNode{
-							Val: 3,
-							Next: &ListNode{
-								Val:  5,
-								Next: nil,
-							},
-						},
-					},
-				},
-			},
+			expected: createSingleLinkedList([]int{2, 1, 4, 3, 5}),
 		},
 		{
 			name: "two",
 			args: args{
-				head: &ListNode{
-					Val: 1,
-					Next: &ListNode{
-						Val: 2,
-						Next: &ListNode{
-							Val: 3,
-							Next: &ListNode{
-								Val: 4,
-								Next: &ListNode{
-									Val:  5,
-									Next: nil,
-								},
-							},
-						},
-					},
-				},
-				k: 3,
+				head: createSingleLinkedList([]int{1, 2, 3, 4, 5}),
+				k:    3,
 			},
-			expected: &ListNode{
-				Val: 3,
-				Next: &ListNode{
-					Val: 2,
-					Next: &ListNode{
-						Val: 1,
-						Next: &ListNode{
-							Val: 4,
-							Next: &ListNode{
-								Val:  5,
-								Next: nil,
-							},
-						},
-					},
-				},
-			},
+			expected: createSingleLinkedList([]int{3, 2, 1, 4, 5}),
 		},
 
 		{
 			name: "three",
 			args: args{
-				head: &ListNode{
-					Val:  1,
-					Next: nil,
-				},
-				k: 2,
+				head: createSingleLinkedList([]int{1}),
+				k:    2,
 			},
-			expected: &ListNode{
-				Val:  1,
-				Next: nil,
-			},
+			expected: createSingleLinkedList([]int{1}),
 		},
 	}
 	for _, data := range tests {

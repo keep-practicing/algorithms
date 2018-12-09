@@ -6,6 +6,17 @@ import (
 	"testing"
 )
 
+func createSingleLinkedList(arr []int) *ListNode {
+	head := &ListNode{}
+	cur := head
+
+	for _, j := range arr {
+		cur.Next = &ListNode{Val: j}
+		cur = cur.Next
+	}
+	return head.Next
+}
+
 func TestAddTwoNumbers1(t *testing.T) {
 	testDatas := []struct {
 		name     string
@@ -14,160 +25,40 @@ func TestAddTwoNumbers1(t *testing.T) {
 		expected *ListNode
 	}{
 		{
-			name: "one",
-			arg1: &ListNode{
-				Val: 2,
-				Next: &ListNode{
-					Val: 4,
-					Next: &ListNode{
-						Val: 3,
-					},
-				},
-			},
-			arg2: &ListNode{
-				Val: 5,
-				Next: &ListNode{
-					Val: 6,
-					Next: &ListNode{
-						Val: 4,
-					},
-				},
-			},
-			expected: &ListNode{
-				Val: 7,
-				Next: &ListNode{
-					Val: 0,
-					Next: &ListNode{
-						Val: 8,
-					},
-				},
-			},
+			name:     "one",
+			arg1:     createSingleLinkedList([]int{2, 4, 3}),
+			arg2:     createSingleLinkedList([]int{5, 6, 4}),
+			expected: createSingleLinkedList([]int{7, 0, 8}),
 		},
 		{
-			name: "two",
-			arg1: &ListNode{
-				Val:  5,
-				Next: nil,
-			},
-			arg2: &ListNode{
-				Val:  5,
-				Next: nil,
-			},
-			expected: &ListNode{
-				Val: 0,
-				Next: &ListNode{
-					Val:  1,
-					Next: nil,
-				},
-			},
+			name:     "two",
+			arg1:     createSingleLinkedList([]int{5}),
+			arg2:     createSingleLinkedList([]int{5}),
+			expected: createSingleLinkedList([]int{0, 1}),
 		},
 		{
-			name: "three",
-			arg1: &ListNode{
-				Val:  1,
-				Next: nil,
-			},
-			arg2: &ListNode{
-				Val: 9,
-				Next: &ListNode{
-					Val: 9,
-					Next: &ListNode{
-						Val: 9,
-					},
-				},
-			},
-			expected: &ListNode{
-				Val: 0,
-				Next: &ListNode{
-					Val: 0,
-					Next: &ListNode{
-						Val: 0,
-						Next: &ListNode{
-							Val: 1,
-						},
-					},
-				},
-			},
+			name:     "three",
+			arg1:     createSingleLinkedList([]int{1}),
+			arg2:     createSingleLinkedList([]int{9, 9, 9}),
+			expected: createSingleLinkedList([]int{0, 0, 0, 1}),
 		},
 		{
-			name: "four",
-			arg1: &ListNode{
-				Val: 9,
-				Next: &ListNode{
-					Val: 9,
-					Next: &ListNode{
-						Val: 9,
-					},
-				},
-			},
-			arg2: &ListNode{
-				Val:  1,
-				Next: nil,
-			},
-			expected: &ListNode{
-				Val: 0,
-				Next: &ListNode{
-					Val: 0,
-					Next: &ListNode{
-						Val: 0,
-						Next: &ListNode{
-							Val: 1,
-						},
-					},
-				},
-			},
+			name:     "four",
+			arg1:     createSingleLinkedList([]int{9, 9, 9}),
+			arg2:     createSingleLinkedList([]int{1}),
+			expected: createSingleLinkedList([]int{0, 0, 0, 1}),
 		},
 		{
-			name: "five",
-			arg1: &ListNode{
-				Val: 4,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val: 1,
-					},
-				},
-			},
-			arg2: &ListNode{
-				Val:  1,
-				Next: nil,
-			},
-			expected: &ListNode{
-				Val: 5,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val:  1,
-						Next: nil,
-					},
-				},
-			},
+			name:     "five",
+			arg1:     createSingleLinkedList([]int{4, 3, 1}),
+			arg2:     createSingleLinkedList([]int{1}),
+			expected: createSingleLinkedList([]int{5, 3, 1}),
 		},
 		{
-			name: "six",
-			arg1: &ListNode{
-				Val:  1,
-				Next: nil,
-			},
-			arg2: &ListNode{
-				Val: 4,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val: 1,
-					},
-				},
-			},
-			expected: &ListNode{
-				Val: 5,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val:  1,
-						Next: nil,
-					},
-				},
-			},
+			name:     "six",
+			arg1:     createSingleLinkedList([]int{1}),
+			arg2:     createSingleLinkedList([]int{4, 3, 1}),
+			expected: createSingleLinkedList([]int{5, 3, 1}),
 		},
 	}
 
@@ -188,160 +79,40 @@ func TestAddTwoNumbers2(t *testing.T) {
 		expected *ListNode
 	}{
 		{
-			name: "one",
-			arg1: &ListNode{
-				Val: 2,
-				Next: &ListNode{
-					Val: 4,
-					Next: &ListNode{
-						Val: 3,
-					},
-				},
-			},
-			arg2: &ListNode{
-				Val: 5,
-				Next: &ListNode{
-					Val: 6,
-					Next: &ListNode{
-						Val: 4,
-					},
-				},
-			},
-			expected: &ListNode{
-				Val: 7,
-				Next: &ListNode{
-					Val: 0,
-					Next: &ListNode{
-						Val: 8,
-					},
-				},
-			},
+			name:     "one",
+			arg1:     createSingleLinkedList([]int{2, 4, 3}),
+			arg2:     createSingleLinkedList([]int{5, 6, 4}),
+			expected: createSingleLinkedList([]int{7, 0, 8}),
 		},
 		{
-			name: "two",
-			arg1: &ListNode{
-				Val:  5,
-				Next: nil,
-			},
-			arg2: &ListNode{
-				Val:  5,
-				Next: nil,
-			},
-			expected: &ListNode{
-				Val: 0,
-				Next: &ListNode{
-					Val:  1,
-					Next: nil,
-				},
-			},
+			name:     "two",
+			arg1:     createSingleLinkedList([]int{5}),
+			arg2:     createSingleLinkedList([]int{5}),
+			expected: createSingleLinkedList([]int{0, 1}),
 		},
 		{
-			name: "three",
-			arg1: &ListNode{
-				Val:  1,
-				Next: nil,
-			},
-			arg2: &ListNode{
-				Val: 9,
-				Next: &ListNode{
-					Val: 9,
-					Next: &ListNode{
-						Val: 9,
-					},
-				},
-			},
-			expected: &ListNode{
-				Val: 0,
-				Next: &ListNode{
-					Val: 0,
-					Next: &ListNode{
-						Val: 0,
-						Next: &ListNode{
-							Val: 1,
-						},
-					},
-				},
-			},
+			name:     "three",
+			arg1:     createSingleLinkedList([]int{1}),
+			arg2:     createSingleLinkedList([]int{9, 9, 9}),
+			expected: createSingleLinkedList([]int{0, 0, 0, 1}),
 		},
 		{
-			name: "four",
-			arg1: &ListNode{
-				Val: 9,
-				Next: &ListNode{
-					Val: 9,
-					Next: &ListNode{
-						Val: 9,
-					},
-				},
-			},
-			arg2: &ListNode{
-				Val:  1,
-				Next: nil,
-			},
-			expected: &ListNode{
-				Val: 0,
-				Next: &ListNode{
-					Val: 0,
-					Next: &ListNode{
-						Val: 0,
-						Next: &ListNode{
-							Val: 1,
-						},
-					},
-				},
-			},
+			name:     "four",
+			arg1:     createSingleLinkedList([]int{9, 9, 9}),
+			arg2:     createSingleLinkedList([]int{1}),
+			expected: createSingleLinkedList([]int{0, 0, 0, 1}),
 		},
 		{
-			name: "five",
-			arg1: &ListNode{
-				Val: 4,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val: 1,
-					},
-				},
-			},
-			arg2: &ListNode{
-				Val:  1,
-				Next: nil,
-			},
-			expected: &ListNode{
-				Val: 5,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val:  1,
-						Next: nil,
-					},
-				},
-			},
+			name:     "five",
+			arg1:     createSingleLinkedList([]int{4, 3, 1}),
+			arg2:     createSingleLinkedList([]int{1}),
+			expected: createSingleLinkedList([]int{5, 3, 1}),
 		},
 		{
-			name: "six",
-			arg1: &ListNode{
-				Val:  1,
-				Next: nil,
-			},
-			arg2: &ListNode{
-				Val: 4,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val: 1,
-					},
-				},
-			},
-			expected: &ListNode{
-				Val: 5,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val:  1,
-						Next: nil,
-					},
-				},
-			},
+			name:     "six",
+			arg1:     createSingleLinkedList([]int{1}),
+			arg2:     createSingleLinkedList([]int{4, 3, 1}),
+			expected: createSingleLinkedList([]int{5, 3, 1}),
 		},
 	}
 

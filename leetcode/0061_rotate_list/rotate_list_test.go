@@ -5,6 +5,17 @@ import (
 	"testing"
 )
 
+func createSingleLinkedList(arr []int) *ListNode {
+	head := &ListNode{}
+	cur := head
+
+	for _, j := range arr {
+		cur.Next = &ListNode{Val: j}
+		cur = cur.Next
+	}
+	return head.Next
+}
+
 func TestRotateList(t *testing.T) {
 	testDatas := []struct {
 		name     string
@@ -13,60 +24,28 @@ func TestRotateList(t *testing.T) {
 		expected *ListNode
 	}{
 		{
-			name: "one",
-			arg: &ListNode{Val: 1, Next: &ListNode{
-				Val: 2, Next: &ListNode{
-					Val: 3, Next: &ListNode{Val: 4, Next: nil},
-				},
-			}},
-			k: 2,
-			expected: &ListNode{Val: 3, Next: &ListNode{
-				Val: 4, Next: &ListNode{
-					Val: 1, Next: &ListNode{Val: 2, Next: nil},
-				},
-			}},
+			name:     "one",
+			arg:      createSingleLinkedList([]int{1, 2, 3, 4}),
+			k:        2,
+			expected: createSingleLinkedList([]int{3, 4, 1, 2}),
 		},
 		{
-			name: "two",
-			arg: &ListNode{Val: 1, Next: &ListNode{
-				Val: 2, Next: &ListNode{
-					Val: 3, Next: nil,
-				},
-			}},
-			k: 3,
-			expected: &ListNode{Val: 1, Next: &ListNode{
-				Val: 2, Next: &ListNode{
-					Val: 3, Next: nil,
-				},
-			}},
+			name:     "two",
+			arg:      createSingleLinkedList([]int{1, 2, 3}),
+			k:        3,
+			expected: createSingleLinkedList([]int{1, 2, 3}),
 		},
 		{
-			name: "three",
-			arg: &ListNode{Val: 1, Next: &ListNode{
-				Val: 2, Next: &ListNode{
-					Val: 3, Next: nil,
-				},
-			}},
-			k: 5,
-			expected: &ListNode{Val: 2, Next: &ListNode{
-				Val: 3, Next: &ListNode{
-					Val: 1, Next: nil,
-				},
-			}},
+			name:     "three",
+			arg:      createSingleLinkedList([]int{1, 2, 3}),
+			k:        5,
+			expected: createSingleLinkedList([]int{2, 3, 1}),
 		},
 		{
-			name: "four",
-			arg: &ListNode{Val: 1, Next: &ListNode{
-				Val: 2, Next: &ListNode{
-					Val: 3, Next: nil,
-				},
-			}},
-			k: 0,
-			expected: &ListNode{Val: 1, Next: &ListNode{
-				Val: 2, Next: &ListNode{
-					Val: 3, Next: nil,
-				},
-			}},
+			name:     "four",
+			arg:      createSingleLinkedList([]int{1, 2, 3}),
+			k:        0,
+			expected: createSingleLinkedList([]int{1, 2, 3}),
 		},
 		{
 			name:     "five",
@@ -76,9 +55,9 @@ func TestRotateList(t *testing.T) {
 		},
 		{
 			name:     "four",
-			arg:      &ListNode{Val: 1, Next: nil},
+			arg:      createSingleLinkedList([]int{1}),
 			k:        5,
-			expected: &ListNode{Val: 1, Next: nil},
+			expected: createSingleLinkedList([]int{1}),
 		},
 	}
 
