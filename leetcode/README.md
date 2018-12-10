@@ -9,3 +9,4 @@
 |0025|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[solution](./0025_reverse_nodes_in_k_group/README.md)|Hard||
 |0061|[Rotate List](https://leetcode.com/problems/rotate-list/)|[solution](./0061_rotate_list/README.md)|Medium||
 |0067|[add Binary](https://leetcode.com/problems/add-binary/)|[solution](./0067_add_binary/README.md)|Easy||
+|0070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[solution](./0070_climbing_stairs/readme.md)|Easy|dynamic programming|
