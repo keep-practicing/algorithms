@@ -19,4 +19,4 @@ Explanation: Because the path 1→3→1→1→1 minimizes the sum.
 
 ## Solution
 
-[code](./mininum_path_sum.go)
+[code](./minimum_path_sum.go)

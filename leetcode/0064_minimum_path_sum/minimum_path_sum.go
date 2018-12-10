@@ -1,4 +1,4 @@
-package mininumpathsum
+package minimumpathsum
 
 // recursion dfs
 /*
