@@ -4,8 +4,10 @@ go:
   - "1.11.x"
   - master
 
-before_install:
-  - go get -t -v ./...
+go_import_path: op
+
+install:
+  - go get -t -v ./...  # default install
 
 script:
   - go test ./... -race -coverprofile=coverage.txt -covermode=atomic
