@@ -1,7 +1,11 @@
 package triangle
 
-import "op/utils"
+import (
+	"op/utils"
+)
 
+// dfs
+/*
 func mininumTotal(triangle [][]int) int {
 	if len(triangle) == 0 {
 		return 0
@@ -22,4 +26,39 @@ func dfs(x int, y int, sum int, triangle [][]int, result *int) {
 
 	dfs(x+1, y, sum, triangle, result)
 	dfs(x+1, y+1, sum, triangle, result)
+}
+*/
+
+// dynamic programming
+func minimumTotal(triangle [][]int) int {
+	m := len(triangle)
+	if m == 0 {
+		return 0
+	}
+
+	dp := make([][]int, m)
+
+	dp[0] = append(dp[0], triangle[0][0])
+
+	for i := 1; i < m; i++ {
+		for j, num := range triangle[i] {
+			if j >= len(dp[i-1]) {
+				dp[i] = append(dp[i], num+dp[i-1][j-1])
+			} else {
+				if j-1 >= 0 && dp[i-1][j-1] < dp[i-1][j] {
+					dp[i] = append(dp[i], num+dp[i-1][j-1])
+				} else {
+					dp[i] = append(dp[i], num+dp[i-1][j])
+				}
+			}
+		}
+	}
+
+	var mininum = utils.MaxInt
+	for _, num := range dp[m-1] {
+		if num < mininum {
+			mininum = num
+		}
+	}
+	return mininum
 }

@@ -14,7 +14,7 @@ func TestTriangle(t *testing.T) {
 	expectedData := []int{11, 0, -1}
 
 	for index, data := range testData {
-		if mininum := mininumTotal(data); mininum != expectedData[index] {
+		if mininum := minimumTotal(data); mininum != expectedData[index] {
 			t.Errorf("expected %d, got %d", expectedData[index], mininum)
 		}
 	}
