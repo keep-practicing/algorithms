@@ -1,4 +1,4 @@
-package singlelinkedlist
+package singlelinkedlistreverse
 
 // ListNode is node of linked list
 type ListNode struct {
