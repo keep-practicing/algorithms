@@ -11,3 +11,4 @@
 |0067|[add Binary](https://leetcode.com/problems/add-binary/)|[solution](./0067_add_binary/README.md)|Easy||
 |0070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[solution](./0070_climbing_stairs/readme.md)|Easy|dynamic programming|
 |0120|[Triangle](https://leetcode.com/problems/triangle/)|[solution](./0120_triangle/readme.md)|Medium|dynamic programming; recursion|
+|0343|[Integer Break](https://leetcode.com/problems/integer-break/)|[solution](./0343_integer_break/readme.md)|Medium|recursion; memory search; dynamic programming|
