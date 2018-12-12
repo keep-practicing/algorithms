@@ -23,8 +23,9 @@ func TestIsSymmetric(t *testing.T) {
 	testData := [][]int{
 		{1, 2, 2, 3, 4, 4, 3},
 		{1, 2, 2, 3, 3},
+		{},
 	}
-	expectedData := []bool{true, false}
+	expectedData := []bool{true, false, true}
 
 	for index, data := range testData {
 		if res := isSymmetric(createBinaryTree(data)); res != expectedData[index] {
