@@ -16,11 +16,9 @@ func lengthOfLIS(nums []int) int {
 	for i := 1; i < n; i++ {
 		for j := 0; j < i; j++ {
 			if nums[j] < nums[i] {
-				memo[i], _ = utils.CalcMaxInt(memo[i], 1+memo[j])
+				memo[i] = utils.CalcMaxInt(memo[i], 1+memo[j])
 			}
 		}
 	}
-
-	res, _ := utils.CalcMaxInt(memo...)
-	return res
+	return utils.CalcMaxInt(memo...)
 }

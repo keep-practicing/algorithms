@@ -57,7 +57,7 @@ func integerBreak(n int) int {
 	for i := 2; i <= n; i++ {
 		// 求解memo[i]
 		for j := 1; j <= i-1; j++ {
-			memo[i], _ = utils.CalcMaxInt(memo[i], j*(i-j), j*memo[i-j])
+			memo[i] = utils.CalcMaxInt(memo[i], j*(i-j), j*memo[i-j])
 		}
 	}
 	return memo[n]
