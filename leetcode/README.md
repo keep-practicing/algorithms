@@ -18,3 +18,4 @@
 |0120|[Triangle](https://leetcode.com/problems/triangle/)|[solution](./0120_triangle/readme.md)|Medium|dynamic programming; dfs|
 |0198|[House Robber](https://leetcode.com/problems/house-robber/)|[solution](./0198_house_robber/readme.md)|Easy|dynamic programming; memory search|
 |0343|[Integer Break](https://leetcode.com/problems/integer-break/)|[solution](./0343_integer_break/readme.md)|Medium|recursion; memory search; dynamic programming|
+|0416|[Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)|[solution](./0416_partition_equal_subset_sum/readme.md)|Medium|dp; 0-1 knapsack problem|
