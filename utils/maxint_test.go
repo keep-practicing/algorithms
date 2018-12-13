@@ -7,10 +7,10 @@ func TestCalcMaxInt(t *testing.T) {
 		{},
 		{3, 4, 67, 8},
 	}
-	expectedData := []int{-1, 67}
+	expectedData := []int{0, 67}
 
 	for index, data := range testData {
-		if res, _ := CalcMaxInt(data...); res != expectedData[index] {
+		if res := CalcMaxInt(data...); res != expectedData[index] {
 			t.Errorf("expected %d, got %d", expectedData[index], res)
 		}
 	}

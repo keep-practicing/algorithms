@@ -28,12 +28,11 @@ func wiggleMaxLength(nums []int) int {
 	for i := 1; i < n; i++ {
 		for j := 0; j < i; j++ {
 			if nums[i] > nums[j] {
-				up[i], _ = utils.CalcMaxInt(up[i], down[j]+1)
+				up[i] = utils.CalcMaxInt(up[i], down[j]+1)
 			} else if nums[i] < nums[j] {
-				down[i], _ = utils.CalcMaxInt(down[i], up[j]+1)
+				down[i] = utils.CalcMaxInt(down[i], up[j]+1)
 			}
 		}
 	}
-	res, _ := utils.CalcMaxInt(up[n-1], down[n-1])
-	return res
+	return utils.CalcMaxInt(up[n-1], down[n-1])
 }

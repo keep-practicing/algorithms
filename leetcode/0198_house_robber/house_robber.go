@@ -64,9 +64,9 @@ func rob(nums []int) int {
 	for i := n - 2; i >= 0; i-- {
 		for j := i; j < n; j++ {
 			if j+2 < n {
-				memo[i], _ = utils.CalcMaxInt(memo[i], nums[j]+memo[j+2])
+				memo[i] = utils.CalcMaxInt(memo[i], nums[j]+memo[j+2])
 			} else {
-				memo[i], _ = utils.CalcMaxInt(memo[i], nums[j])
+				memo[i] = utils.CalcMaxInt(memo[i], nums[j])
 			}
 		}
 	}
