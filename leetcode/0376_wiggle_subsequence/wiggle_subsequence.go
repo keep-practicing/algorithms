@@ -14,7 +14,7 @@ import "op/utils"
 func wiggleMaxLength(nums []int) int {
 	n := len(nums)
 
-	if n == 0 || n == 1 {
+	if n == 1 || n == 0 {
 		return n
 	}
 
