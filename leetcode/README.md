@@ -21,6 +21,7 @@
 |0112|[Path Sum](https://leetcode.com/problems/path-sum/)|[solution](./0112_path_sum/readme.md)|Easy|binary sum|
 |0120|[Triangle](https://leetcode.com/problems/triangle/)|[solution](./0120_triangle/readme.md)|Medium|dynamic programming; dfs|
 |0198|[House Robber](https://leetcode.com/problems/house-robber/)|[solution](./0198_house_robber/readme.md)|Easy|dynamic programming; memory search|
+|0226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[solution](./0226_invert_binary_tree/readme.md)|Easy|recursion; binary tree|
 |0300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[solution](./0300_longest_increasing_subsequence/readme.md)|Medium|dp|
 |0343|[Integer Break](https://leetcode.com/problems/integer-break/)|[solution](./0343_integer_break/readme.md)|Medium|recursion; memory search; dynamic programming|
 |0376|[Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/submissions/)|[solution](./0376_wiggle_subsequence/readme.md)|Medium|dp|
