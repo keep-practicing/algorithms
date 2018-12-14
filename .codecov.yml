@@ -1,0 +1,14 @@
+coverage:
+  round: up
+  range: 0..10
+  precision: 5
+
+  status:
+    project: yes
+    patch: yes
+    changes: yes
+
+comment:
+  layout: "header, diff"
+  behavior: default
+  require_changes: yes
