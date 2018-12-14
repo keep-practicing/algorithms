@@ -2,7 +2,7 @@ language: go
 
 go:
   - "1.11.x"
-  - master
+  # - master
 
 go_import_path: op
 
