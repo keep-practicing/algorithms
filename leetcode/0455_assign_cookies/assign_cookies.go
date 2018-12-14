@@ -19,5 +19,6 @@ func findContentChildren(g []int, s []int) int {
 			gi++
 		}
 	}
+
 	return res
 }
