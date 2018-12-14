@@ -6,7 +6,7 @@ go:
 
 go_import_path: op
 
-before_install:
+install:
   - go get -t -v ./...
 
 script:
