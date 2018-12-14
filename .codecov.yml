@@ -1,11 +1,12 @@
 codecov:
+  token: e0e6ac48-6cfa-42d3-a93c-79c92ef1ed8e
   notify:
     require_ci_to_pass: yes
 
 coverage:
   round: up
   range: 0..10
-  precision: 5
+  precision: 2
 
   status:
     project: yes
@@ -14,7 +15,7 @@ coverage:
 
 comment:
   layout: "reach, diff, flags, files"
-  behavior: new
+  behavior: default
   require_changes: false  # if true: only post the comment if coverage changes
   require_base: no        # [yes :: must have a base report to post]
   require_head: yes       # [yes :: must have a head report to post]

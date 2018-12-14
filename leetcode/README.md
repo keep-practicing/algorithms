@@ -26,3 +26,4 @@
 |0343|[Integer Break](https://leetcode.com/problems/integer-break/)|[solution](./0343_integer_break/readme.md)|Medium|recursion; memory search; dynamic programming|
 |0376|[Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/submissions/)|[solution](./0376_wiggle_subsequence/readme.md)|Medium|dp|
 |0416|[Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)|[solution](./0416_partition_equal_subset_sum/readme.md)|Medium|dp; 0-1 knapsack problem|
+|0455|[Assign Cookies](https://leetcode.com/problems/assign-cookies/)|[solution](./0455_assign_cookies/readme.md)|Easy|greedy algorithm|
