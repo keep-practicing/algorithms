@@ -12,8 +12,7 @@ func TestTwoSum(t *testing.T) {
 		t.Error("Failed, two sum")
 	}
 
-	// if res := twoSum(nums, 6); !reflect.DeepEqual(res, []int{}) {
-	// 	t.Error("Failed, two sum")
-	// }
-
+	if res := twoSum(nums, 6); !reflect.DeepEqual(res, []int{}) {
+		t.Error("Failed, two sum")
+	}
 }
