@@ -8,7 +8,7 @@ func TestWiggleSubsequence(t *testing.T) {
 		{1, 7, 4, 9, 2, 5},
 		{1, 2, 3, 4, 5, 6, 7, 8, 9},
 		// {},
-		{2},
+		// {2},
 		{3, 4},
 		{3, 3, 3, 2, 5},
 		{
@@ -38,7 +38,8 @@ func TestWiggleSubsequence(t *testing.T) {
 	expectedData := []int{
 		7, 6, 2,
 		// 0,
-		1, 2, 3, 334,
+		// 1,
+		2, 3, 334,
 	}
 
 	for index, data := range testData {
