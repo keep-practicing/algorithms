@@ -18,7 +18,7 @@
 |0101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[solution](./0101_symmetric_tree/readme.md)|Easy|stack; recursion; iterative|
 |0107|[Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[solution](./0107_binary_tree_level_order_traversal_2/readme.md)|Easy|binary tree|
 |0111|[Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|[solution](./0111_minimum_depth_of_binary_tree/readme.md)|Easy|binary tree|
-|0112|[Path Sum](https://leetcode.com/problems/path-sum/)|[solution](./0112_path_sum/readme.md)|Easy|binary sum|
+|0112|[Path Sum](https://leetcode.com/problems/path-sum/)|[solution](./0112_path_sum/readme.md)|Easy|binary tree|
 |0167|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[solution](./0167_two_sum2/readme.md)|Easy|对撞指针(双索引)|
 |0120|[Triangle](https://leetcode.com/problems/triangle/)|[solution](./0120_triangle/readme.md)|Medium|dynamic programming; dfs|
 |0198|[House Robber](https://leetcode.com/problems/house-robber/)|[solution](./0198_house_robber/readme.md)|Easy|dynamic programming; memory search|
