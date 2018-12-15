@@ -27,4 +27,12 @@ func TestTwoSum2(t *testing.T) {
 			t.Errorf("expected %v, got %v", expectedData[index], res)
 		}
 	}
+
+	defer func() {
+		if err := recover(); err == nil {
+			t.Errorf("there should throw a panic")
+		}
+	}()
+
+	twoSum2([]int{2, 7, 11, 15}, 90)
 }
