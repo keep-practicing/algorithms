@@ -76,6 +76,5 @@ func addTwoNumbers2(l1 *ListNode, l2 *ListNode) *ListNode {
 		sum %= 10
 		next = addTwoNumbers2(next, &ListNode{Val: carry})
 	}
-
 	return &ListNode{Val: sum, Next: next}
 }
