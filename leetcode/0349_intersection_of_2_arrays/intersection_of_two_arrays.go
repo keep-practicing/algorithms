@@ -13,7 +13,7 @@ func intersection(nums1 []int, nums2 []int) []int {
 	}
 
 	var res []int
-	for item := range set1.M {
+	for item := range set1 {
 		if set2.Contains(item) {
 			if value, ok := item.(int); ok {
 				res = append(res, value)
