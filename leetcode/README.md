@@ -18,9 +18,11 @@
 |0101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[solution](./0101_symmetric_tree/readme.md)|Easy|stack; recursion; iterative|
 |0107|[Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[solution](./0107_binary_tree_level_order_traversal_2/readme.md)|Easy|binary tree|
 |0111|[Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|[solution](./0111_minimum_depth_of_binary_tree/readme.md)|Easy|binary tree|
-|0112|[Path Sum](https://leetcode.com/problems/path-sum/)|[solution](./0112_path_sum/readme.md)|Easy|binary sum|
+|0112|[Path Sum](https://leetcode.com/problems/path-sum/)|[solution](./0112_path_sum/readme.md)|Easy|binary tree|
+|0167|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[solution](./0167_two_sum2/readme.md)|Easy|对撞指针(双索引)|
 |0120|[Triangle](https://leetcode.com/problems/triangle/)|[solution](./0120_triangle/readme.md)|Medium|dynamic programming; dfs|
 |0198|[House Robber](https://leetcode.com/problems/house-robber/)|[solution](./0198_house_robber/readme.md)|Easy|dynamic programming; memory search|
+|0209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[solution](./0209_minimum_size_subarray_sum/readme.md)|Medium|滑动窗口|
 |0226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[solution](./0226_invert_binary_tree/readme.md)|Easy|recursion; binary tree|
 |0283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[solution](./0283_move_zeroes/readme.md)|Easy|array|
 |0300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[solution](./0300_longest_increasing_subsequence/readme.md)|Medium|dp|
@@ -28,4 +30,5 @@
 |0376|[Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/submissions/)|[solution](./0376_wiggle_subsequence/readme.md)|Medium|dp|
 |0392|[Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[solution](./0392_is_subsequence/readme.md)|Medium|greedy algorithm|
 |0416|[Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)|[solution](./0416_partition_equal_subset_sum/readme.md)|Medium|dp; 0-1 knapsack problem|
+|0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|[solution](./0435_non_overlapping_intervals/readme.md)|Medium|dp; greedy algorithm|
 |0455|[Assign Cookies](https://leetcode.com/problems/assign-cookies/)|[solution](./0455_assign_cookies/readme.md)|Easy|greedy algorithm|
