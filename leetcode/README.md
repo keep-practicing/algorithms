@@ -28,6 +28,7 @@
 |0283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[solution](./0283_move_zeroes/readme.md)|Easy|array|
 |0300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[solution](./0300_longest_increasing_subsequence/readme.md)|Medium|dp|
 |0343|[Integer Break](https://leetcode.com/problems/integer-break/)|[solution](./0343_integer_break/readme.md)|Medium|recursion; memory search; dynamic programming|
+|0349|[Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)|[solution](./0349_intersection_of_2_arrays/readme.md)|Easy|set|
 |0350| [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[solution](./0350_intersection_of_two_arrays2/readme.md)|Easy|map|
 |0376|[Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/submissions/)|[solution](./0376_wiggle_subsequence/readme.md)|Medium|dp|
 |0392|[Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[solution](./0392_is_subsequence/readme.md)|Medium|greedy algorithm|
