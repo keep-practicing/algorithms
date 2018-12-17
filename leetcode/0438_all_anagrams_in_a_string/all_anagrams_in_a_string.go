@@ -36,6 +36,9 @@ Time: 2018-12-17
 
 package allanagramsinastring
 
+// Sliding Window
+// Time complexity: O(len(p) + len(s)) = O(n)
+// Space complexity: O(1)
 func findAnagrams(s string, p string) []int {
 	var (
 		lenS  = len(s)
