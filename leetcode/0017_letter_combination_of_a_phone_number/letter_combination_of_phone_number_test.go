@@ -6,12 +6,19 @@ import (
 )
 
 func TestLetterCombinations(t *testing.T) {
-	digits := "23"
-	expectedData := []string{
-		"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf",
+	testData := []string{
+		"23",
+		"",
 	}
 
-	if res := letterCombinations(digits); !reflect.DeepEqual(res, expectedData) {
-		t.Errorf("expected %v, got %v", expectedData, res)
+	expectedData := [][]string{
+		[]string{"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"},
+		[]string{},
+	}
+
+	for index, digits := range testData {
+		if res := letterCombinations(digits); !reflect.DeepEqual(res, expectedData[index]) {
+			t.Errorf("expected %v, got %v", expectedData[index], res)
+		}
 	}
 }
