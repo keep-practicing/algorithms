@@ -19,11 +19,16 @@ func TestFindAnagrams(t *testing.T) {
 			s: "abab",
 			p: "ab",
 		},
+		arg{
+			p: "abab",
+			s: "ab",
+		},
 	}
 
 	expected := [][]int{
 		{0, 6},
 		{0, 1, 2},
+		{},
 	}
 
 	for index, args := range cases {
