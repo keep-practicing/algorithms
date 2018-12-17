@@ -1,4 +1,4 @@
-# classic algorithm
+# classic algorithms
 
 ### [Sort](./sort/readme.md)
 ### [Dynamic Programming](./dp/readme.md)

@@ -6,8 +6,8 @@
 
 This repository is used to record the process that I study data structure and algorithm. Each algorithm and data structure has its own separate README file with related explanations and links for further reading.
 
-### [Data structure](./data-structure/readme.md)
+### [Data structures](./data-structures/readme.md)
 
-### [Algorithm](./algorithm/readme.md)
+### [Algorithms](./algorithms/readme.md)
 
 ### [Solution for leetcode](./leetcode/README.md)
