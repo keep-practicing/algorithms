@@ -1,8 +1,6 @@
 package triangle
 
-import (
-	"op/utils"
-)
+import "algorithms/utils"
 
 // dfs
 /*

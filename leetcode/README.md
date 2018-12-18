@@ -39,3 +39,4 @@
 |0447|[Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/)|[solution](./0447_number_of_boomerangs/readme.md)|Easy||
 |0454|[4Sum II](https://leetcode.com/problems/4sum-ii/)|[solution](./0454_4sum2/readme.md)|Medium||
 |0455|[Assign Cookies](https://leetcode.com/problems/assign-cookies/)|[solution](./0455_assign_cookies/readme.md)|Easy|greedy algorithm|
+|0728|[Self Dividing Numbers](https://leetcode.com/problems/self-dividing-numbers/)|[solution](./0728_self_dividing_numbers/self_dividing_numbers.go)|Easy||

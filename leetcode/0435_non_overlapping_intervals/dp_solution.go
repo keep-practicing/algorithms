@@ -1,7 +1,7 @@
 package nonoverlappingintervals
 
 import (
-	"op/utils"
+	"algorithms/utils"
 	"sort"
 )
 
