@@ -1,3 +1,9 @@
+/*
+350. Intersection of Two Arrays II
+https://leetcode.com/problems/intersection-of-two-arrays-ii/
+
+*/
+
 package intersectionof2arrays2
 
 func intersect(nums1 []int, nums2 []int) []int {
