@@ -4,7 +4,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |0001|[Two Sum](https://leetcode.com/problems/two-sum/)|[solution](0001_two_sum/readme.md)|Easy|array; lookup table|
 |0002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[solution](0002_add_two_numbers/README.md)|Medium||
-|0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[solution](0003_longest_substring_without_repeating_characters/README.md)|Medium|滑动窗口|
+|0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[solution](0003_longest_substring_without_repeating_characters/README.md)|Medium|Sliding window|
 |0017|[Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)|[solution](0017_letter_combination_of_a_phone_number/README.md)|Medium|tree|
 |0020|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|[solution](0020_valid_parentheses/readme.md)|Easy||
 |0021|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[solution](0021_merge_two_sorted_lists/README.md)|Easy||
@@ -24,7 +24,7 @@
 |0120|[Triangle](https://leetcode.com/problems/triangle/)|[solution](./0120_triangle/readme.md)|Medium|dynamic programming; dfs|
 |0167|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[solution](./0167_two_sum2/readme.md)|Easy|对撞指针(双索引)|
 |0198|[House Robber](https://leetcode.com/problems/house-robber/)|[solution](./0198_house_robber/readme.md)|Easy|dynamic programming; memory search|
-|0209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[solution](./0209_minimum_size_subarray_sum/readme.md)|Medium|滑动窗口|
+|0209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[solution](./0209_minimum_size_subarray_sum/readme.md)|Medium|Sliding window|
 |0226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[solution](./0226_invert_binary_tree/readme.md)|Easy|recursion; binary tree|
 |0283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[solution](./0283_move_zeroes/readme.md)|Easy|array|
 |0300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[solution](./0300_longest_increasing_subsequence/readme.md)|Medium|dp|
@@ -35,6 +35,7 @@
 |0392|[Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[solution](./0392_is_subsequence/readme.md)|Medium|greedy algorithm|
 |0416|[Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)|[solution](./0416_partition_equal_subset_sum/readme.md)|Medium|dp; 0-1 knapsack problem|
 |0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|[solution](./0435_non_overlapping_intervals/readme.md)|Medium|dp; greedy algorithm|
+|0438|[ Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)|[solution](./0438_all_anagrams_in_a_string/all_anagrams_in_a_string.go)|Easy|Sliding window|
 |0447|[Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/)|[solution](./0447_number_of_boomerangs/readme.md)|Easy||
 |0454|[4Sum II](https://leetcode.com/problems/4sum-ii/)|[solution](./0454_4sum2/readme.md)|Medium||
 |0455|[Assign Cookies](https://leetcode.com/problems/assign-cookies/)|[solution](./0455_assign_cookies/readme.md)|Easy|greedy algorithm|
