@@ -1,6 +1,6 @@
 package lis
 
-import "op/utils"
+import "algorithms/utils"
 
 func lengthOfLIS(nums []int) int {
 	n := len(nums)

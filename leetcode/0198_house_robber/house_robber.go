@@ -1,6 +1,6 @@
 package houserobber
 
-import "op/utils"
+import "algorithms/utils"
 
 /*
 func rob(nums []int) int {

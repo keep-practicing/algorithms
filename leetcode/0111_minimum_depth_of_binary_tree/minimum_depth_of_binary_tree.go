@@ -1,6 +1,6 @@
 package minimumdepthofbinarytree
 
-import "op/utils"
+import "algorithms/utils"
 
 // TreeNode binary tree node.
 type TreeNode struct {

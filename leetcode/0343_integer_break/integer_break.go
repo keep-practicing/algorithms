@@ -1,6 +1,6 @@
 package integerbreak
 
-import "op/utils"
+import "algorithms/utils"
 
 // recursion
 /*
