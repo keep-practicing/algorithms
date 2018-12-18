@@ -4,7 +4,7 @@ go:
   - "1.11.x"
   # - master
 
-go_import_path: op
+go_import_path: algorithms
 
 install:
   - go get -t -v ./...
