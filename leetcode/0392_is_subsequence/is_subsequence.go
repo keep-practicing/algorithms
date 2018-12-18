@@ -28,7 +28,7 @@ Special thanks to @pbrother for adding this problem and creating all test cases.
 package issubsequence
 
 // greedy
-//	Time complexity: O(n), where n is min(  len(s),   len(t)    )
+// Time complexity: O(n), where n is min(  len(s),   len(t)    )
 // Space complexity: O(1)
 func isSubsequence(s string, t string) bool {
 	var si, ti int
