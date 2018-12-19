@@ -27,7 +27,7 @@
 |0198|[House Robber](./0198_house_robber/house_robber.go)|Easy|dynamic programming; memory search|
 |0209|[Minimum Size Subarray Sum](./0209_minimum_size_subarray_sum/minimum_size_subarray_sum.go)|Medium|Sliding window|
 |0226|[Invert Binary Tree](./0226_invert_binary_tree/invert_binary_tree.go)|Easy|recursion; binary tree|
-|0283|[Move Zeroes solution1](./0283_move_zeroes/move_zeroes.go) <br/>  [Move Zeroes solution2](./0283_move_zeroes/move_zeroes2.go)|Easy|array|
+|0283|[Move Zeroes(solution1)](./0283_move_zeroes/move_zeroes.go) <br/>  [Move Zeroes(solution2)](./0283_move_zeroes/move_zeroes2.go)|Easy|array|
 |0300|[Longest Increasing Subsequence](./0300_longest_increasing_subsequence/lis.go)|Medium|dp|
 |0343|[Integer Break](./0343_integer_break/integer_break.go)|Medium|recursion; memory search; dynamic programming|
 |0349|[Intersection of Two Arrays](./0349_intersection_of_2_arrays/intersection_of_two_arrays.go)|Easy|set|
@@ -35,7 +35,7 @@
 |0376|[Wiggle Subsequence](./0376_wiggle_subsequence/wiggle_subsequence.go)|Medium|dp|
 |0392|[Is Subsequence](./0392_is_subsequence/is_subsequence.go)|Medium|greedy algorithm|
 |0416|[Partition Equal Subset Sum](./0416_partition_equal_subset_sum/partition_equal_subset_sum.go)|Medium|dp; 0-1 knapsack problem|
-|0435|[Non-overlapping Intervals dp_solution](./0435_non_overlapping_intervals/dp_solution.go)   <br/>[Non-overlapping Intervals greedy_solution](./0435_non_overlapping_intervals/greedy_solution.go)|Medium|dp; greedy algorithm|
+|0435|[Non-overlapping Intervals(dp solution)](./0435_non_overlapping_intervals/dp_solution.go)   <br/>[Non-overlapping Intervals(greedy solution)](./0435_non_overlapping_intervals/greedy_solution.go)|Medium|dp; greedy algorithm|
 |0438|[ Find All Anagrams in a String](./0438_all_anagrams_in_a_string/all_anagrams_in_a_string.go)|Easy|Sliding window|
 |0447|[Number of Boomerangs](./0447_number_of_boomerangs/number_of_boomerangs.go)|Easy||
 |0454|[4Sum II](./0454_4sum2/4sum2.go)|Medium||
